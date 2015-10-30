@@ -30,7 +30,7 @@ definitions:
       type:
         type: string
         enum: [cat, dog, bird]
-      dangerous:
+      nature:
         type: string
         enum: [harmless, normal, dangerous, killer]
       address:
@@ -103,9 +103,9 @@ paths:
           required: false
           type: string
           enum: [cat, dog, bird]
-        - name: dangerous
+        - name: nature
           in: query
-          description: Filters pets by danger rating (harmless, normal, dangerous, killer)
+          description: Filters pets by its nature (harmless, normal, dangerous, killer)
           required: false
           type: string
           enum: [harmless, normal, dangerous, killer]
