@@ -23,9 +23,3 @@ cp -Rf /tmp/src/. ./
 
 echo "---> Building your Node application from source using production flag"
 npm --production install -d
-
-# Fix source directory permissions
-# https://github.com/openshift/sti-base/blob/master/bin/fix-permissions
-chgrp -R 0 ./
-chmod -R g+rw ./
-find ./ -type d -exec chmod g+x {} +
