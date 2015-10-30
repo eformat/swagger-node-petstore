@@ -30,6 +30,9 @@ definitions:
       type:
         type: string
         enum: [cat, dog, bird]
+      dangerous:
+        type: string
+        enum: [harmless, normal, dangerous, killer]
       address:
         $ref: "#/definitions/veterinarian"
       vet:
@@ -100,6 +103,12 @@ paths:
           required: false
           type: string
           enum: [cat, dog, bird]
+        - name: dangerous
+          in: query
+          description: Filters pets by danger rating (harmless, normal, dangerous, killer)
+          required: false
+          type: string
+          enum: [harmless, normal, dangerous, killer]
         - name: age
           in: query
           description: Filters pets by age
