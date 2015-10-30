@@ -1,0 +1,44 @@
+{
+  "name": "swagger-node-petstore",
+  "version": "1.0.0",
+  "description": "REST API for Swagger Server",
+  "keywords": [
+    "express",
+    "swagger",
+    "server",
+    "samples",
+    "mock",
+    "fake",
+    "stub",
+    "test",
+    "rest",
+    "api"
+  ],
+  "author": {
+    "name": "Mike Hepburn",
+    "url": "https://github.com/eformat/swagger-node-petstore"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/eformat/swagger-node-petstore",
+  "main": "README.md",
+  "scripts": {
+    "start": "node server.js",
+    "build": "jshint . --verbose && jscs . --verbose",
+    "upgrade": "ncu --upgradeAll && npm update",
+    "bump": "bump --prompt",
+    "release": "npm run upgrade && npm run build && npm run bump && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eformat/swagger-node-petstore.git"
+  },
+  "dependencies": {
+    "swagger-server": ">=1.0.0-alpha.16"
+  },
+  "devDependencies": {
+    "jscs": "^2.1.1",
+    "jshint": "^2.8.0",
+    "npm-check-updates": "^2.2.2",
+    "version-bump-prompt": "^1.5.1"
+  }
+}
